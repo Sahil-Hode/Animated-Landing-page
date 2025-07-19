@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOBSL - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans text-gray-800">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-gradient-to-r from-blue-500 to-cyan-400 p-4 relative z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold tracking-wide">BOBSL</div>
+            <button class="md:hidden text-white text-3xl" onclick="OpenNav()">☰</button>
+            <ul class="hidden md:flex gap-6 text-white font-medium">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#process" class="hover:underline">Process</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden z-50">
+        <div class="absolute inset-0" onclick="CloseNav()"></div>
+        <div class="fixed top-0 right-0 h-full w-1/2 bg-white shadow-lg p-6 transform translate-x-full transition-transform duration-300"
+            id="drawerMenu">
+            <button
+                class="absolute top-4 right-4 text-2xl font-bold text-gray-600 hover:text-red-500 transition-colors duration-200"
+                onclick="CloseNav()">✕</button>
+
+            <ul class="mt-20 flex flex-col gap-8 text-xl font-semibold text-gray-800 px-4">
+                <li>
+                    <a href="#home" onclick="CloseNav()"
+                        class="relative group inline-block transition duration-200">
+                        Home
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#process" onclick="CloseNav()"
+                        class="relative group inline-block transition duration-200">
+                        Process
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="CloseNav()"
+                        class="relative group inline-block transition duration-200">
+                        Contact
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-10 md:mb-0 md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl font-bold leading-tight mb-4">
+                    DON’T LOOK ANYWHERE,<br />
+                    THIS IS THE BEST PLACE ON WEB
+                </h1>
+                <p class="mb-6 text-lg">
+                    Living in today’s metropolitan world of cellular phones, mobile
+                    computers and other high-tech gadgets is not just hectic but very...
+                </p>
+                <a href="#process" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-offset-2 hover:ring-blue-300 hover:animate-pulsehover:animate-bounce">
+                    Get Started →
+                </a>
+            </div>
+
+            <!-- Image section -->
+            <div class="md:w-1/2">
+                <img src="laptop.png" alt="Laptop Screenshot" class="mx-auto rounded shadow-xl" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 sm:py-20 bg-white text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4 px-4">Our Working Process</h2>
+        <p class="text-gray-500 mb-10 sm:mb-12 max-w-xl mx-auto px-4 text-sm sm:text-base">
+            It won’t be a bigger problem to find one video game lover in your
+            neighbor. Since the introduction of Virtual Game, it has been
+            achieving...
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-8 max-w-6xl mx-auto">
+
+            <div
+                class="bg-blue-100 rounded-2xl p-5 sm:p-6 shadow-md border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/40 group">
+                <div class="text-5xl sm:text-6xl mb-3 text-blue-500 group-hover:animate-pulse">⚡</div>
+                <h3 class="font-semibold text-lg sm:text-xl text-gray-800">1. Researching</h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Gathering insights and understanding user needs.</p>
+            </div>
+
+            <div
+                class="bg-blue-100 rounded-2xl p-5 sm:p-6 shadow-md border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-pink-400/40 group">
+                <div class="text-5xl sm:text-6xl mb-3 text-pink-500 group-hover:animate-pulse">🧠</div>
+                <h3 class="font-semibold text-lg sm:text-xl text-gray-800">2. Wireframing</h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Sketching layout and interaction structure.</p>
+            </div>
+
+            <div
+                class="bg-blue-100 rounded-2xl p-5 sm:p-6 shadow-md border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-green-400/40 group">
+                <div class="text-5xl sm:text-6xl mb-3 text-green-500 group-hover:animate-pulse">🧩</div>
+                <h3 class="font-semibold text-lg sm:text-xl text-gray-800">3. Prototyping</h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Building clickable prototypes for testing.</p>
+            </div>
+
+            <div
+                class="bg-blue-100 rounded-2xl p-5 sm:p-6 shadow-md border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/40 group">
+                <div class="text-5xl sm:text-6xl mb-3 text-yellow-500 group-hover:animate-pulse">🎨</div>
+                <h3 class="font-semibold text-lg sm:text-xl text-gray-800">4. Final Design</h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Delivering polished UI for production use.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer section-->
+    <footer id="contact" class="bg-gray-100 text-center p-6">
+        <p class="text-sm text-gray-600">© 2025 BOBSL. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
